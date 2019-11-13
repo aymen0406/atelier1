@@ -1,0 +1,29 @@
+<form #userform="ngForm" (ngSubmit)="onsubmit()" >
+  <fieldset>
+    <legend>Informations générales</legend>
+
+    <table>
+      <tr>
+        <td>Nom</td>
+        <td><input type="text" name="nom" [(ngModel)]="user.nom"></td>
+
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="text" name="email" [(ngModel)]="user.email"></td>
+      </tr>
+
+      <tr>
+        <td>CIN</td>
+        <td><input type="text" name="cin" [(ngModel)]="user.cin"></td>
+      </tr>
+    </table>
+
+  <table>
+    <tr>
+      <td></td>
+      <td><button type="submit">Ajouter</button> </td>
+    </tr>
+  </table>
+  </fieldset>
+</form>

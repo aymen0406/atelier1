@@ -1,0 +1,23 @@
+<h1>{{ titre }}</h1>
+<div *ngFor="let article of listeArticles">
+<!-- <fieldset *ngIf="article.auteur != 'Ahmed Said'"> -->
+    <fieldset [hidden]="article.auteur == 'Ahmed Said'">
+  <legend>{{ article.titre }}</legend>
+  <table>
+    <tr>
+      <td>Auteur</td>
+      <td>{{ article.auteur }}</td>
+    </tr>
+
+    <tr>
+      <td>Date</td>
+      <td>{{ article.date }}</td>
+    </tr>
+    <tr>
+      <td>Contenu</td>
+      <td>{{ article.contenu }}</td>
+    </tr>
+  </table>
+  
+</fieldset>
+</div>

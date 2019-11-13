@@ -1,0 +1,56 @@
+<form [formGroup]="userForm">
+
+  <table>
+    <tr>
+      <td>Nom</td>
+      <td><input type="text" formControlName="name">
+        <div *ngIf="name.invalid" class="alert alert-danger">
+
+          <div *ngIf=" name.touched && name.errors.required">
+            Le nom est obligatoire.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            le nom doit contenir au moins 3 caractères.
+          </div>
+
+
+        </div>
+        <!---name.invalid: name est le getter définit au niveau du ts---->
+      </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" formControlName="email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+             class="alert alert-danger">
+
+          <div *ngIf="email.errors.required">
+            L'email est obligatoire.
+          </div>
+          <div *ngIf="email.errors.pattern">
+            Format Email invalide
+          </div>
+
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>CIN</td>
+      <td><input type="text" formControlName="cin">
+        <div *ngIf="name.invalid" class="alert alert-danger">
+
+          <div *ngIf=" cin.touched && cin.errors.required">
+            Le cin est obligatoire.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            le nom doit contenir 8 caractères.
+          </div>
+
+
+        </div>
+      </td>
+    </tr>
+    <button type="submit" [disabled]="!userForm.valid">Add</button>
+  </table>
+
+</form>

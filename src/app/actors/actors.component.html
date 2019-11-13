@@ -1,0 +1,19 @@
+<div *ngFor="let a of listActors; let i = index">
+  <app-actor
+    [actor]= "a" (clicked)="delete($event)" (addchecked)="addFavorite($event)">
+  </app-actor>
+</div>
+
+<ul>
+  <li *ngFor="let fa of listFav; let i = index">
+
+
+
+
+
+        {{fa.firstName}}
+        {{fa.lastName}}
+
+
+  </li>
+</ul>

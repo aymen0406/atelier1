@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <td>Name</td>
+    <td>LastName</td>
+  </tr>
+  <tr>
+    <td>{{actor.firstName}}</td>
+    <td>{{actor.lastName}}</td>
+    <td><button type="button" (click)="deleteActor(actor)" >supprimer</button></td>
+    <input type="checkbox" (click)="AddtoFavorite(actor)">
+  </tr>
+</table>
